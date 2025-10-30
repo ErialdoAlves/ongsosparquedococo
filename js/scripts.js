@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{const y=new Date().getFullYear();['year','year2','year3'].forEach(id=>{if(document.getElementById(id))document.getElementById(id).textContent=y;});});

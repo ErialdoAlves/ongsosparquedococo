@@ -1,0 +1,28 @@
+body{
+    font-family:Arial;
+    background:#f5fff5;
+    color:#111}
+.container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:1rem}
+
+.site-header{
+    background:#2e7d32;
+    color:white;
+    padding:1rem}
+
+.site-footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:1rem;
+    margin-top:2rem}
+    
+button{
+    background:#2e7d32;
+    color:#fff;
+    border:none;
+    padding:0.5rem 1rem;
+    border-radius:5px;
+    cursor:pointer}
