@@ -1,94 +1,152 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ONG SOS PARQUE DO COCÓ</title>
-  <meta name="description" content="ONG SOS PARQUE DO COCÓ — proteção ambiental e sustentabilidade.">
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+ 
   <header class="site-header">
-    <div class="container">
+    <div class="container container--nav">
       <a href="index.html" class="logo" aria-label="Voltar para a página inicial">
-        <img src="assets/images/logo.png" alt="Logotipo ONG SosParquedoCocó" width="140" height="90">
-      </a>
-      <nav>
-        <ul class="main-nav">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
-          <li><a href="cadastro.html">Cadastro</a></li>
-        </ul>
-      </nav>
+      <img src="assets/images/logo.png" alt="Logotipo ONG SosParquedoCocó" width="140" height="90"></a>
+      <button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false"
+        onclick="toggleMenu()">
+        <span class="hamburger-icon">☰</span>
+      </button>
+        <nav id="main-navigation" class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="index.html" class="main-nav__link">Início</a></li>
+          
+            <li class="main-nav__item main-nav__item--has-dropdown">
+              <a href="projetos.html" class="main-nav__link">Projetos</a>
+              <!--
+              <ul class="dropdown-menu">
+               <li><a href="projetos.html#reflorestar">Reflorestamento</a></li>
+               <li><a href="projetos.html#agua">Água Limpa</a></li>
+               <li><a href="projetos.html#fauna">Asa Verde</a></li>
+              </ul>
+              -->
+            </li>
+
+            <li class="main-nav__item"><a href="cadastro.html" class="main-nav__link button button--primary">Cadastre-se</a></li>
+          </ul>
+        </nav>
     </div>
-  </header>
+ </header>
 
-  <main>
-    <section class="hero container">
-      <h1>ONG - SOS PARQUE DO COCÓ</h1>
-      <p>Promovendo ações pela preservação do meio ambiente e conscientização ecológica.</p>
-      <p><strong>Contato:</strong> contato@sosparquedococo.org | (85) 9 3343 2323</p>
+<main>
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">ONG - SOS PARQUE DO COCÓ</h1>
+        <p class="hero__subtitle">Promovendo ações pela preservação do meio ambiente e conscientização ecológica.</p>
+        <p class="hero__contact">
+          <strong class="text-label">Contato:</strong> 
+          <a href="mailto:contato@sosparquedococo.org" class="hero__link">contato@sosparquedococo.org</a> | (85) 9 3343 2323
+        </p>
+      </div>
     </section>
 
-    <section class="about container">
-      <h2>Quem somos</h2>
-      <p>O SOS Parque do Cocó é uma organização ambiental que existe porque o planeta e seus ecossistemas precisam de quem os defenda.</p>
-      <p>Estamos em Fortaleza/CE há 01 ano denunciando e confrontando governos, empresas e projetos que incentivam a destruição do Parque do Cocó e ameaçam o clima global.</p>
+     <section class="about section-padding">
+        <div class="container layout-grid">
+            <div class="col-8">
+              <h2 class="heading-2">Quem somos</h2>
+              <p>O SOS Parque do Cocó é uma organização ambiental que existe porque o planeta e seus ecossistemas precisam de quem os defenda.</p>
+              <p>Estamos em Fortaleza/CE há 10 anos, denunciando, confrontando governos, empresas e projetos que incentivam a destruição do Parque do Cocó e ameaçam o clima global.</p>
 
-      <h2>Missão</h2>
-      <p>Proteger, conservar e promover a valorização do Parque do Cocó e de sua biodiversidade, estimulando a consciência ambiental, o voluntariado e o desenvolvimento sustentável. Atuamos para garantir que este importante patrimônio natural continue sendo um espaço de equilíbrio ecológico, educação ambiental e bem-estar para as futuras gerações.</p>
-      <figure>
-        <img src="assets/images/imagem01parquedococo.jpeg" alt="Floresta verde simbolizando a preservação ambiental" width="800" height="450">
-        <figcaption>Floresta protegida pela ONG SOS Parque do Cocó.</figcaption>
-      </figure>
+              <h2 class="heading-2">Missão</h2>
+              <p>Proteger, conservar e promover a valorização do Parque do Cocó e de sua biodiversidade, estimulando a consciência ambiental, o voluntariado e o desenvolvimento sustentável.</p>
+            </div>
+            <div class="col-4">
+                <figure class="figure">
+                <img src="assets/images/imagem01parquedococo.jpeg" alt="Floresta verde simbolizando a preservação ambiental" width="800" height="450" loading="lazy" class="figure__img">
+                <figcaption class="figure__caption">Floresta protegida pela ONG SOS Parque do Cocó.</figcaption>
+                </figure>
+            </div>
 
-      <h2>Problemas Ambientais ("SOS")</h2>
-      <p>Poluição do Rio Cocó: Há preocupações com a qualidade da água do rio, que afeta a vida aquática.</p>
-      <p>Degradação do parque: O parque também enfrenta problemas ambientais que afetam sua biodiversidade.</p>
-      <p>Ações de preservação: O "Reflorestar é Viver" é um projeto plantio e preservação.</p>
+            <div class="col-12">
+              <h2 class="heading-2">Problemas Ambientais (<span class="badge badge--danger">SOS</span>)</h2>
+               <ul class="list-unstyled flex-group">
+                 <li class="flex-item">
+                   <span class="tag tag--problem">Poluição Rio Cocó</span>: Preocupações com a qualidade da água do rio, que afeta a vida aquática.
+                 </li>
+                  <li class="flex-item">
+                   <span class="tag tag--problem">Degradação</span>: O parque também enfrenta problemas ambientais que afetam sua biodiversidade.
+                  </li>
+                  <li class="flex-item">
+                   <span class="tag tag--action">Reflorestar é Viver</span>: Um projeto plantio e preservação.
+                  </li>
+              </ul>
+            </div>
+        </div>
+     </section>
 
-      <h2>Parque Estadual do Cocó: conheça o parque estadual mais visitado do Brasil</h2>
+    <section class="park-info section-padding section-padding--small bg-light">
+      <div class="container layout-grid">
+        <div class="col-12">
+          <h2 class="heading-2">Parque Estadual do Cocó: conheça o parque estadual mais visitado do Brasil</h2>
+        </div>
 
-      <p>Se estendendo por mais de 15 bairros de Fortaleza, o Parque Estadual do Cocó é o quarto maior da América Latina e o maior do Norte/Nordeste brasileiro em área urbana. Com mais de 1.500 hectares, é um parque natural localizado no centro urbano de uma das principais e mais populosas cidades do Brasil.</p>
+        <article class="col-6 content-block">
+          <p>Se estendendo por mais de 15 bairros de Fortaleza, o Parque Estadual do Cocó é o <strong class="text-highlight">quarto maior da América Latina</strong> e o maior do Norte/Nordeste brasileiro em área urbana. Com mais de 1.500 hectares, é um parque natural localizado no centro urbano...</p>
+          <p>Maior área verde da capital cearense, ele fica a menos de 15 minutos de alguns dos principais pontos turísticos da cidade... Com diversos portões... e mesmo sendo o <strong class="text-highlight">parque estadual mais visitado do Brasil</strong>...</p>
+        </article>
 
-      <p>Maior área verde da capital cearense, ele fica a menos de 15 minutos de alguns dos principais pontos turísticos da cidade, como a praias de Iracema e do Futuro e a Ponta do Mucuripe. Com diversos portões nas duas principais entradas (nas ruas Padre Antônio Tomás e Adahil Barreto) e mesmo sendo o parque estadual mais visitado do Brasil, a sensação de quem trabalha no dia a dia da unidade é de que a presença do público poderia ser ainda maior.</p>  
-
-      <p>“Estou há quase dois anos no Parque Estadual do Cocó e me parece que ele não é tão percebido pela população em geral. Por ser um parque urbano, temos desafios muito específicos como poluição, invasão e incêndios. Partimos da premissa óbvia: a principal beneficiária e interessada é a comunidade. E ela só vai ajudar a resolver os problemas se conhecer e gostar do parque”, comenta Narciso Mota, gestor da unidade de conservação.</p>
-
-      <p>Com diversas trilhas na mata e uma área verde com flora riquíssima, o grande xodó do parque é o rio Cocó. Percorrendo boa parte da extensão do espaço público, ele traz um panorama visual único – e é o palco de um dos maiores atrativos do parque, o passeio de barco pelo rio Cocó.
-      Para a população local e para turistas, o Parque Estadual do Cocó traz a possibilidade de um tipo de recreação diferente para quem vê Fortaleza apenas como sol e mar: o banho de floresta.</p>
-
-      <p>“Com a vegetação e o rio como eixo principal, o parque tem características únicas. A mudança de clima é perceptível: são 2 ou 3 graus de temperatura mais fresca no perímetro dele, quase um microclima específico. Eu mesmo adoro a praia, mas esse banho de floresta é incrível também. As pessoas precisam conhecer essa imersão dentro das trilhas com a mata fechando dos dois lados”, comenta Narciso.</p>
-
-      <h2>O que fazer no Parque Estadual do Cocó</h2>
-
-      <p>O bioma de Caatinga, que inclui manguezais e restinga, é predominante no Parque Estadual do Cocó. Por isso, as trilhas, que são área de conservação integral, estão entre os pontos mais visitados – unindo a natureza intrinsicamente conectada ao centro de uma metrópole.</p>
-      
-      <p>Nas duas grandes áreas de visitação, atrações não faltam. O local ainda conta com a presença de educadoras e educadores ambientais da Secretaria de Meio Ambiente e Mudança do Clima do Ceará, com preparação adequada para orientar visitantes na melhor forma de aproveitar o Cocó.</p>
-
-      <p>Dentre as atividades, o passeio de barco pelo rio Cocó é uma atração muito procurada. São duas possibilidades: um mais curto, de cerca de 20 minutos, e outro que dura até duas horas, que vai até a foz do rio Cocó, onde é possível mergulhar.</p>
-
-      <p>O Parque também é um ambiente propício para grupos de observação de aves, muito comuns durante todo o ano.</p>
-
-      <p>Para além da natureza, o Parque Estadual do Cocó é uma ótima opção para atividades que envolvem contemplação – e também para quem quer mais animação. Na sede, existe um anfiteatro onde acontecem shows e eventos esportivos, além de estrutura completa, inclusive com um auditório e museu.</p>
-
-      <p>Na área de visitação, é possível fazer piqueniques, comemorações de aniversário ou simplesmente para passear por entre as alamedas para um banho de floresta. O Cocó conta também com quadras esportivas e brinquedo praça.</p>
-
-
+        <article class="col-6 content-block">
+          <p>"Estou há quase dois anos no Parque Estadual do Cocó e me parece que ele não é tão percebido pela população em geral... A principal beneficiária e interessada é a comunidade. E ela só vai ajudar a resolver os problemas se conhecer e gostar do parque," comenta Narciso Mota, gestor.</p>
+          <p>Com a vegetação e o rio como eixo principal, o parque tem características únicas. <strong class="text-highlight">A mudança de clima é perceptível: são 2 ou 3 graus de temperatura mais fresca</strong> no perímetro dele, quase um microclima específico...</p>
+        </article>
+      </div>
     </section>
-  </main>
+
+    <section class="activities section-padding">
+      <div class="container">
+          <h2 class="heading-2">O que fazer no Parque Estadual do Cocó</h2>
+          <p class="text-intro">O bioma de Caatinga, que inclui manguezais e restinga, é predominante. As trilhas, que são área de conservação integral, estão entre os pontos mais visitados.</p>
+
+           <div class="card-grid">
+             <div class="card card--activity">
+                <h3 class="card__title">Passeio de Barco</h3>
+                <p class="card__description">Duas opções de duração: um curto de 20 minutos e um longo de até duas horas, que vai até a foz para mergulho.</p>
+                <span class="badge badge--success">Aquático</span>
+             </div>
+
+              <div class="card card--activity">
+                <h3 class="card__title">Trilhas e "Banho de Floresta"</h3>
+                <p class="card__description">Caminhadas nas trilhas com a mata fechando dos dois lados. Uma imersão relaxante na natureza.</p>
+                <span class="badge badge--info">Trekking</span>
+              </div>
+
+              <div class="card card--activity">
+                <h3 class="card__title">Observação de Aves</h3>
+                <p class="card__description">Ambiente propício para grupos de observação de aves, muito comuns durante todo o ano.</p>
+                <span class="badge badge--secondary">Ecoturismo</span>
+              </div>
+           </div>
+
+            <div class="content-block mt-64">
+              <h3 class="heading-3">Quero ser Voluntário! <a href="cadastro.html" class="button button--secondary">Cadastrar-se</a></h3>
+            </div>
+
+      </div>
+    </section>
+</main>
 
   <footer class="site-footer">
-    <div class="container">
-      <address>
-        <strong>ONG SOS PARQUE DO COCÓ</strong><br>
-        Av. Sustentável, 321 — Fortaleza, CE<br>
-        CEP: 60000-000<br>
-        <a href="mailto:contato@verdeviva.org">contato@sosparquedococo.org</a>
-      </address>
-      <p class="small">&copy; <span id="year"></span> ONG SosParquedoCocó — Todos os direitos reservados.</p>
+    <div class="container container--footer">
+      <address class="footer-address">
+      <h4 class="heading-4">Contato</h4>
+      <p><strong>ONG SOS PARQUE DO COCÓ</strong><br> Av. Sustentável, 321 — Fortaleza, CE<br> CEP: 60000-000<br>
+      <a href="mailto:contato@verdeviva.org" class="link--light">contato@sosparquedococo.org</a></p></address>
+
+      <p class="small footer-copy">&copy; <span id="year">2025</span> ONG SosParquedoCocó — Todos os direitos reservados.</p>
     </div>
   </footer>
+
   <script src="js/scripts.js" defer></script>
+
 </body>
 </html>

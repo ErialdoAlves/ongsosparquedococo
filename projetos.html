@@ -3,49 +3,123 @@
 <head>
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>Projetos - ONG SOS PARQUE DO COCÓ</title>
+
 <link rel='stylesheet' href='css/styles.css'>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class='site-header container'>
-    <a href="index.html" class="logo" aria-label="Voltar para a página inicial">
+
+    <header class="site-header">
+      <div class="container container--nav">
+        <a href="index.html" class="logo" aria-label="Voltar para a página inicial">
         <img src="assets/images/logo.png" alt="Logotipo ONG SosParquedoCocó" width="140" height="90">
-    </a>
-    <nav>
-      <ul class='main-nav'>
-        <li><a href='index.html'>Início</a></li>
-        <li><a href='projetos.html'>Projetos</a></li>
-        <li><a href='cadastro.html'>Cadastro</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class='container'>
-    <h1>Projetos Ambientais</h1>
-    <p>Conheça os principais projetos do SOS Parque do Cocó e descubra como participar ou contribuir.</p>
-    <section>
-      <h2>Conservação e Reflorestamento Comunitário</h2>
-      <p>Plantio de árvores nativas em áreas degradadas, envolvendo escolas e moradores locais.</p>
-      <figure>
-          <img src="assets/images/imagem01projetofull.jpeg" alt="Floresta verde simbolizando a preservação ambiental" width="800" height="450">
-        </figure>
-    </section>
-    <section>
-      <h2>Recursos Hidricos</h2>
-      <p>Água Limpa – Despoluição e preservação de Rio Cocó.</p>
-      <figure>
-          <img src="assets/images/imagem02projetofull.jpeg" alt="Floresta verde simbolizando a preservação ambiental" width="800" height="450">
-        </figure>
-    </section>
-    <section>
-      <h2>Fauna e Biodiversidade</h2>
-      <p>Projeto Asa Verde – Conservação de aves e habitats naturais.</p>
-      <figure>
-          <img src="assets/images/imagem03projetofull.jpeg" alt="Floresta verde simbolizando a preservação ambiental" width="800" height="450">
-        </figure>
-    </section>
+        </a>
+        <button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" onclick="toggleMenu()">
+        <span class="hamburger-icon">☰</span>
+        </button>
+        <nav id="main-navigation" class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href='index.html' class="main-nav__link">Início</a></li>
+            <li class="main-nav__item main-nav__item--has-dropdown">
+              <a href='projetos.html' class="main-nav__link main-nav__link--active">Projetos</a> 
+              <!--
+              <ul class="dropdown-menu">
+               <li><a href="#reflorestar">Reflorestamento</a></li>
+               <li><a href="#agua">Água Limpa</a></li>
+               <li><a href="#asaverde">Asa Verde</a></li>
+              </ul>
+              -->
+            </li>
+            <li class="main-nav__item"><a href='cadastro.html' class="main-nav__link button button--primary">Cadastro</a></li>
+          </ul>
+        </nav>
+        </div>
+    </header>
+
+  <main>
+      <section class="hero hero--small">
+        <div class="container">
+          <h1 class="hero__title">Projetos Ambientais</h1>
+          <p class="hero__subtitle">Conheça as ações do SOS Parque do Cocó e descubra como participar ou contribuir.</p>
+        </div>
+      </section>
+
+      <section class="projects section-padding">
+        <div class="container layout-grid">
+            <article id="reflorestar" class="col-12 project-card card-grid__item">
+              <div class="card card--project layout-grid">
+                  <div class="col-8 card__content">
+                    <h2 class="card__title heading-2">Conservação e Reflorestamento Comunitário</h2>
+                    <p>Este projeto foca no plantio de árvores nativas em áreas degradadas do Parque do Cocó. Envolve ativamente escolas e moradores locais, promovendo a educação ambiental e o senso de responsabilidade comunitária pela preservação do bioma.</p>
+                    <div class="flex-group flex-group--tags">
+                      <span class="tag tag--action">Reflorestar é Viver</span>
+                      <span class="tag tag--action">Voluntariado</span>
+                    </div>
+                    <a href="#cadastro" class="button button--primary mt-32">Quero Plantar!</a>
+                  </div>
+                  <div class="col-4 card__image-container">
+                   <figure class="figure">
+                     <img src="assets/images/imagem01projetofull.jpeg" alt="Comunidade plantando  árvores no Parque do Cocó" class="figure__img">
+                   </figure>
+                  </div>
+              </div>
+            </article>
+
+            <article id="agua" class="col-12 project-card card-grid__item">
+              <div class="card card--project layout-grid">
+                <div class="col-4 card__image-container order-last-mobile">
+                  <figure class="figure">
+                    <img src="assets/images/imagem02projetofull.jpeg" alt="Água do Rio Cocó em dia limpo" class="figure__img">
+                  </figure>
+                </div>
+                  <div class="col-8 card__content">
+                    <h2 class="card__title heading-2">Recursos Hídricos: Água Limpa</h2>
+                    <p>Focado na despoluição, monitoramento da qualidade da água e preservação das margens do Rio Cocó. Este projeto é vital para a saúde de todo o ecossistema, incluindo a vida aquática e a vegetação de manguezal.</p>
+                    <div class="flex-group flex-group--tags">
+                      <span class="tag tag--problem">Poluição Zero</span>
+                      <span class="tag tag--problem">Monitoramento</span>
+                    </div>
+                    <a href="#contato" class="button button--secondary mt-32">Apoie a Causa</a>
+                  </div>
+              </div>
+            </article>
+
+            <article id="fauna" class="col-12 project-card card-grid__item">
+              <div class="card card--project layout-grid">
+                <div class="col-8 card__content">
+                  <h2 class="card__title heading-2">Fauna e Biodiversidade: Projeto Asa Verde</h2>
+                  <p>Dedicado à conservação de espécies de aves e seus habitats naturais no Parque. Inclui mapeamento de ninhos, observação e ações de proteção contra invasões e incêndios que ameaçam a fauna local.</p>
+                  <div class="flex-group flex-group--tags">
+                    <span class="tag tag--action">Ecoturismo</span>
+                    <span class="tag tag--action">Educação Ambiental</span>
+                  </div>
+                  <a href="#contato" class="button button--secondary mt-32">Saiba Mais</a>
+                </div>
+                <div class="col-4 card__image-container">
+                  <figure class="figure">
+                   <img src="assets/images/imagem03projetofull.jpeg" alt="Ave em seu habitat natural no Parque do Cocó" class="figure__img">
+                  </figure>
+                </div>
+              </div>
+          </article>
+        </div>
+      </section>
   </main>
-  <footer class='site-footer container'>
-    <p>&copy; <span id='year2'></span> ONG Parque do Cocó</p>
-  </footer>
-  <script src='js/scripts.js' defer></script>
-</body></html>
+
+    <footer class="site-footer">
+      <div class="container container--footer">
+        <address class="footer-address">
+          <h4 class="heading-4">Contato</h4>
+          <p><strong>ONG SOS PARQUE DO COCÓ</strong><br>
+          Av. Sustentável, 321 — Fortaleza, CE<br>
+          CEP: 60000-000<br>
+          <a href="mailto:contato@verdeviva.org" class="link--light">contato@sosparquedococo.org</a></p>
+        </address>
+        <p class="small footer-copy">&copy; <span id="year">2025</span> ONG SosParquedoCocó — Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src='js/scripts.js' defer></script>
+
+</body>
+</html>

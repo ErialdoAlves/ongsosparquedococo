@@ -3,73 +3,149 @@
 <head>
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>Cadastro - ONG SOS PARQUE DO COCÓ</title>
+
 <link rel='stylesheet' href='css/styles.css'>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class='site-header container'>
-  <a href="index.html" class="logo" aria-label="Voltar para a página inicial">
-        <img src="assets/images/logo.png" alt="Logotipo ONG SosParquedoCocó" width="140" height="90">
-  </a>
-  <nav>
-    <ul class='main-nav'>
-      <li><a href='index.html'>Início</a></li>
-      <li><a href='projetos.html'>Projetos</a></li>
-      <li><a href='cadastro.html'>Cadastro</a></li>
-    </ul>
-  </nav>
-</header>
-<main class='container'>
-  <h1>Cadastro de Voluntário</h1>
-  <form id='cadastroForm' method='post' novalidate>
-    <fieldset>
-      <legend>Dados Pessoais</legend>
-      
-      <label for='nome'>Nome completo *</label>
-      <input id='nome' name='nome' type='text' required>
 
-      <label for='cpf'>CPF *</label>
-      <input id='cpf' name='cpf' type='text' required placeholder='000.000.000-00'>
+  <header class="site-header">
+    <div class="container container--nav">
+      <a href="index.html" class="logo" aria-label="Voltar para a página inicial">
+          <img src="assets/images/logo.png" alt="Logotipo ONG SosParquedoCocó" width="140" height="90">
+      </a>
+      <button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" onclick="toggleMenu()">
+        <span class="hamburger-icon">☰</span>
+      </button>
+      <nav id="main-navigation" class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href='index.html' class="main-nav__link">Início</a></li>
+          <li class="main-nav__item main-nav__item--has-dropdown">
+            <a href='projetos.html' class="main-nav__link">Projetos</a>
+           
+            <!--
+            <ul class="dropdown-menu">
+              <li><a href="projetos.html#reflorestar">Reflorestamento</a></li>
+              <li><a href="projetos.html#agua">Água Limpa</a></li>
+              <li><a href="projetos.html#fauna">Asa Verde</a></li>
+            </ul>
+            -->
 
-      <label for="nascimento">Data de Nascimento:</label>
-      <input id="nascimento" name="nascimento" type="date" required>
+          </li>
+          <li class="main-nav__item"><a href='cadastro.html' class="main-nav__link button button--primary button--active">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-      <label for='telefone'>Telefone *</label>
-      <input id='telefone' name='telefone' type='tel' required placeholder='(85) 9 9999-9999'>
-    </fieldset>
-    <fieldset>
-      <legend>Informaçoes de Contato</legend>
-      
-      <label for="endereco">Endereço:</label>
-      <input id="endereco" name="endereco" type="text"  required>
+  <main>
+    <section class="section-padding">
+      <div class="container layout-grid">
+        <div class="col-12 col-lg-8"> 
+          <h1 class="heading-1">Cadastro de Voluntário</h1>
+          <p class="text-intro">Preencha o formulário abaixo para se juntar à equipe e defender o Parque do Cocó. Todos os campos com * são obrigatórios.</p>
 
-      <label for='cep'>CEP *</label>
-      <input id='cep' name='cep' type='text' required placeholder='00000-000'>
+          <form id='cadastroForm' class='form' method='post' novalidate>
+            <fieldset class="form__fieldset">
+              <legend class="heading-3">Dados Pessoais</legend>
+              
+              <div class="form-group">
+                <label for='nome' class="form-label">Nome completo *</label>
+                <input id='nome' name='nome' type='text' class="form-control" required>
+                <div class="form-feedback">Digite seu nome completo.</div>
+              </div>
 
-      <label for='cidade'>Cidade *</label>
-      <input id='cidade' name='cidade' type='text' required>
+              <div class="form-group layout-grid">
+                <div class="col-6">
+                  <label for='cpf' class="form-label">CPF *</label>
+                  <input id='cpf' name='cpf' type='text' class="form-control" required placeholder='000.000.000-00'>
+                  <div class="form-feedback">O CPF é obrigatório para o cadastro.</div>
+                </div>
+                
+                <div class="col-6">
+                  <label for="nascimento" class="form-label">Data de Nascimento:</label>
+                  <input id="nascimento" name="nascimento" type="date" class="form-control" required>
+                  <div class="form-feedback">Informe sua data de nascimento.</div>
+                </div>
+              </div>
 
-      <label for='estado'>Estado *</label>
-      <select id='estado' name='estado' required>
+              <div class="form-group">
+                <label for='telefone' class="form-label">Telefone *</label>
+                <input id='telefone' name='telefone' type='tel' class="form-control" required placeholder='(85) 9 9999-9999'>
+              </div>
+            </fieldset>
+            
+            <fieldset class="form__fieldset">
+              <legend class="heading-3">Informações de Contato e Endereço</legend>
+              
+              <div class="form-group">
+                <label for='email' class="form-label">E-mail *</label>
+                <input id='email' name='email' type='email' class="form-control" required>
+              </div>
 
-        <option value=''>Selecione</option>
-        <option value='CE'>Ceará</option>
-        <option value='RJ'>Rio de Janeiro</option>
-        <option value='BA'>Bahia</option>
-        <option value='SP'>São Paulo</option>
-        <option value='RN'>Rio Grande do Norte</option>
+              <div class="form-group">
+                <label for="endereco" class="form-label">Endereço:</label>
+                <input id="endereco" name="endereco" type="text" class="form-control" required placeholder="Rua, número e complemento">
+              </div>
 
-      </select>
-      <hr>
-      <label for='email'>E-mail *</label>
-      <input id='email' name='email' type='email' required>
-    </fieldset>
-    <button type='submit'>Enviar</button>
-    <p id="msg-sucesso" class="msg-sucesso" aria-live="polite" role="status"></p>
-  </form>
-</main>
-  <footer class='site-footer container'>
-    <p>&copy; <span id='year3'></span> ONG SOS Parque do Cocó</p>
-  </footer>
-<script src='js/scripts.js' defer></script>
-</body></html>
+              <div class="form-group layout-grid">
+                <div class="col-4">
+                  <label for='cep' class="form-label">CEP *</label>
+                  <input id='cep' name='cep' type='text' class="form-control" required placeholder='00000-000'>
+                </div>
+                <div class="col-4">
+                  <label for='cidade' class="form-label">Cidade *</label>
+                  <input id='cidade' name='cidade' type='text' class="form-control" required>
+                </div>
+                <div class="col-4">
+                  <label for='estado' class="form-label">Estado *</label>
+                  <select id='estado' name='estado' class="form-control" required>
+                    <option value=''>Selecione</option>
+                    <option value='CE'>Ceará</option>
+                    <option value='RJ'>Rio de Janeiro</option>
+                    <option value='BA'>Bahia</option>
+                    <option value='SP'>São Paulo</option>
+                    <option value='RN'>Rio Grande do Norte</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+            
+            <button type='submit' class='button button--primary button--large'>
+              Enviar Cadastro de Voluntário
+            </button>
+            
+            <p id="msg-sucesso" class="alert alert--success" aria-live="polite" role="status" style="display: none;">
+              ✅ Cadastro enviado com sucesso! Agradecemos seu interesse em proteger o Cocó.
+            </p>
+          </form>
+        </div>
+
+        <div class="col-12 col-lg-4 content-block bg-light">
+            <h3 class="heading-3">Como funciona o voluntariado?</h3>
+            <p>Após o envio, nossa equipe entrará em contato por e-mail em até **48 horas** para agendar uma breve orientação e detalhar as áreas de atuação (Reflorestamento, Monitoramento ou Educação Ambiental).</p>
+            <p>Seu tempo e dedicação são essenciais para a saúde do nosso parque!</p>
+            <a href="projetos.html" class="button button--secondary">Conheça Nossos Projetos</a>
+        </div>
+        
+      </div>
+    </section>
+  </main>
+
+    <footer class="site-footer">
+      <div class="container container--footer">
+        <address class="footer-address">
+          <h4 class="heading-4">Contato</h4>
+          <p><strong>ONG SOS PARQUE DO COCÓ</strong><br>
+          Av. Sustentável, 321 — Fortaleza, CE<br>
+          CEP: 60000-000<br>
+          <a href="mailto:contato@verdeviva.org" class="link--light">contato@sosparquedococo.org</a></p>
+        </address>
+        <p class="small footer-copy">&copy; <span id="year">2025</span> ONG SosParquedoCocó — Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src='js/scripts.js' defer></script>
+
+</body>
+</html>
