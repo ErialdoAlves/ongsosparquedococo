@@ -362,11 +362,15 @@ h4 { font-size: var(--font-size-h4); }
 
 /* Validação Visual */
 .form-control--invalid {
-  border-color: var(--color-danger);
+  border-color: var(--color-danger) !important; /* Borda vermelha forte */
+  box-shadow: 0 0 0 1px var(--color-danger);
 }
+
 .form-control--invalid:focus {
-  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+  border-color: var(--color-danger);
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.4); /* Sombra mais visível para foco no erro */
 }
+
 .form-feedback {
   font-size: var(--font-size-small);
   margin-top: var(--spacing-1);
@@ -480,12 +484,35 @@ h4 { font-size: var(--font-size-h4); }
   border: 1px solid transparent;
   font-weight: var(--font-weight-semibold);
   margin-top: var(--spacing-4);
+  display: none;
+}
+
+/* Regra para mostrar o alerta quando o JS for ativado */
+.alert.is-visible {
+  display: block; /* A classe 'is-visible' fará o alerta aparecer */
 }
 
 .alert--success {
   background-color: #d4edda; /* Verde claro */
   color: #155724; /* Verde escuro */
   border-color: #c3e6cb;
+}
+
+.alert--error {
+  background-color: #f8d7da; /* Vermelho claro */
+  color: var(--color-danger); /* Texto Vermelho definido na variável */
+  border-color: #f5c6cb;
+}
+
+.alert--error ul {
+    margin-top: var(--spacing-1);
+    margin-bottom: 0;
+    padding-left: var(--spacing-3);
+    list-style-type: disc;
+}
+
+.alert--error li {
+    margin-bottom: 4px; /* Espaçamento pequeno entre itens */
 }
 
 /* Estilo para Cartões de Projeto (Usado em projetos.html) */
