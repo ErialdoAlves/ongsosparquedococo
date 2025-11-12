@@ -38,6 +38,7 @@
   /* Outras Variáveis */
   --border-radius-base: 0.3rem;
   --transition-speed: 0.3s;
+
 }
 
 /* Base Reset/Typography */
@@ -153,6 +154,39 @@ h4 { font-size: var(--font-size-h4); }
 /* Breakpoint 5: Extra Grande (Desktop Largo) - 1200px e acima */
 @media (min-width: 1200px) {
   
+}
+
+@media (forced-colors: active) {
+    /* Remove cores de fundo e sombra */
+    * {
+    background-color: transparent !important;
+    color: CanvasText !important; /* Cor do texto padrão do sistema */
+    box-shadow: none !important;
+  }
+  /* Garante que os elementos interativos tenham contorno visível */
+  a:hover, button:hover, input:focus {
+    outline: 3px solid Highlight !important; /* Cor de destaque do sistema */
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Inverte as cores principais */
+    --color-light: #212529; /* Fundo Escuro */
+    --color-dark: #f8faf9; /* Texto Claro */
+    /* Mantém cores de ação/alerta */
+  }
+
+  body {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+
+  .site-header {
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  }
+  /* ... Estilos para os outros componentes ... */
 }
 
 /* 3. NAVEGAÇÃO SOFISTICADA E INTERATIVA (Mobile + Dropdown)*/
