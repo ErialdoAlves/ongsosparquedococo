@@ -114,6 +114,7 @@ h4 { font-size: var(--font-size-h4); }
 }
 
 /* Breakpoint 3: Médio (Tablet Horizontal) - 768px e acima */
+
 @media (min-width: 768px) {
   /* Layout 12 Colunas Customizado */
   .layout-grid {
