@@ -1,12 +1,12 @@
-🌳 SOS Parque do Cocó: Website Institucional
+**OS Parque do Cocó: Website Institucional**
 
 O website da ONG SOS Parque do Cocó é uma plataforma digital dedicada a informar o público sobre as ações de conservação e a mobilizar voluntários para a proteção do Parque Estadual do Cocó, a maior área verde urbana do Norte/Nordeste brasileiro.
 
-🎯 Objetivo Principal
+**Objetivo Principal**
 
 Prover uma experiência de usuário (UX) clara e acessível para:Informar sobre a missão da ONG e a importância do Parque.Mobilizar e cadastrar novos voluntários e apoiadores.Apresentar os projetos ambientais em andamento.
 
-🛠️ Tecnologias Utilizadas
+**Tecnologias Utilizadas**
 
 Este projeto é uma aplicação Front-end estática desenvolvida com ênfase em performance, acessibilidade e arquitetura modular.
 
@@ -17,7 +17,7 @@ Estilização     CSS3 (Mobile-First)      Uso de Variáveis CSS e um sistema de
 Interatividade  JavaScript (Vanilla JS)  Implementação de máscaras de formulário, validação de dados (CPF, Idade) e lógica de navegação.
 Tipografia      Google Fonts (Poppins)   Fonte moderna e legível.
 
-🚀 Como Executar o Projeto Localmente
+**Como Executar o Projeto Localmente**
 
 Siga estes passos simples para ter uma cópia do projeto em funcionamento em sua máquina local.
 
@@ -53,7 +53,7 @@ sos-parque-do-coco/
 ├── projetos.html              # Página de Listagem dos Projetos
 └── cadastro.html              # Página do Formulário de Voluntariado
 
-💻 Destaques Técnicos
+**Destaques Técnicos**
 
 O projeto foi construído com foco em qualidade e escalabilidade:
 
@@ -83,7 +83,7 @@ Foco por Teclado (:focus visível) em todos os elementos interativos.
 
 Estrutura de títulos hierárquicos (h1 a h4).
 
-🤝 Contribuições
+**Contribuições**
 
 Este é um projeto inicial, mas ideias para melhorias futuras são bem-vindas, incluindo:
 
@@ -92,7 +92,7 @@ Refatoração para integrar uma ferramenta de pré-processamento CSS (Sass/Less)
 Integração com um backend real ou serviço serverless para o envio de formulários.
 Otimização de assets para web.
 
-📄 Licença
+**Licença**
 
 O projeto está sob a licença ERZ.
 
